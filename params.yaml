@@ -27,7 +27,7 @@ model:
   sav_dir: models/trained.h5
 
 img_augment:
-  rescale: 0.00392156862745098
+  rescale: 1./255
   shear_range: 0.2
   zoom_range: 0.2
   horizontal_flip: True
