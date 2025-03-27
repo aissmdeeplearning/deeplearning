@@ -20,9 +20,9 @@ model:
   test_path: data/processed/test
   image_size: [255,255]
   loss: 'categorical_crossentropy'
-  optimizer: 'adam'
+  optimizer: 
   metrics: ['accuracy']
-  epochs: 20
+  epochs: 1
   #batch_size: 32
   sav_dir: models/trained.h5
 
