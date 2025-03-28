@@ -27,10 +27,10 @@ jobs:
 
       - name: Docker Build and Push to Docker Hub
         run : |
-            docker build -t deep-learning:latest .
-            docker tag deep-learning tanzeemrugrel/deep-learning:latest
+            docker build -t deeplearning:latest .
+            docker tag deeplearning atharva907/deeplearning:latest
             docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-            docker push tanzeemrugrel/deep-learning:latest
+            docker push atharva907/deeplearning:latest
         env:
             DOCKER_CLI_ACI: 1
 
