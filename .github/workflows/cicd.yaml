@@ -45,7 +45,7 @@ jobs:
       - name: Trivy File Scan
         run: |
             trivy fs . > trivy_scan.txt
-            trivy image tanzeemrugrel/deep-learning:latest > trivy_image_scan.txt
+            trivy image atharva907/deeplearning:latest > trivy_image_scan.txt
 
     
            
