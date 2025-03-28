@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/194235116973141430/643e919317394edfb8b542a38d0cdb67/artifacts
+end_time: 1743197146493
+entry_point_name: ''
+experiment_id: '194235116973141430'
+lifecycle_stage: active
+run_id: 643e919317394edfb8b542a38d0cdb67
+run_name: magnificent-wolf-396
+run_uuid: 643e919317394edfb8b542a38d0cdb67
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743195882231
+status: 3
+tags: []
+user_id: atharvasatishchougale

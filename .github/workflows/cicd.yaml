@@ -1,0 +1,50 @@
+name: MRI
+ 
+on:
+  push:
+    branches: ["main"]
+ 
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f req_production.txt ]; then pip install -r req_production.txt; fi
+
+      - name: Lint with flake8 and PyTest
+        run: |
+            flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+            flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+      - name: Docker Build and Push to Docker Hub
+        run : |
+            docker build -t deep-learning:latest .
+            docker tag deep-learning tanzeemrugrel/deep-learning:latest
+            docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+            docker push tanzeemrugrel/deep-learning:latest
+        env:
+            DOCKER_CLI_ACI: 1
+
+      - name: Run Trivy vulnerability scanner in fs mode
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+            scan-type: 'fs'
+            scan-ref: '.'
+            trivy-config: trivy.yaml
+
+      - name: Trivy File Scan
+        run: |
+            trivy fs . > trivy_scan.txt
+            trivy image tanzeemrugrel/deep-learning:latest > trivy_image_scan.txt
+
+    
+           

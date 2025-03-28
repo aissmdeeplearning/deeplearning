@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1743197146487
+current_stage: None
+description: ''
+last_updated_timestamp: 1743197146487
+name: Deep_Learning_model
+run_id: 643e919317394edfb8b542a38d0cdb67
+run_link: ''
+source: mlflow-artifacts:/194235116973141430/643e919317394edfb8b542a38d0cdb67/artifacts/model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/194235116973141430/643e919317394edfb8b542a38d0cdb67/artifacts/model
+user_id: null
+version: 2
