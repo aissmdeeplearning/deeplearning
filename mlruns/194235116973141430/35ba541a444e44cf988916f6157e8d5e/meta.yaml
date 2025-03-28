@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/194235116973141430/35ba541a444e44cf988916f6157e8d5e/artifacts
+end_time: 1743193422130
+entry_point_name: ''
+experiment_id: '194235116973141430'
+lifecycle_stage: active
+run_id: 35ba541a444e44cf988916f6157e8d5e
+run_name: resilient-ox-987
+run_uuid: 35ba541a444e44cf988916f6157e8d5e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743192632244
+status: 3
+tags: []
+user_id: atharvasatishchougale

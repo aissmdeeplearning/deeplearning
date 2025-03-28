@@ -22,7 +22,7 @@ model:
   loss: 'categorical_crossentropy'
   optimizer: 
   metrics: ['accuracy']
-  epochs: 1
+  epochs: 3
   #batch_size: 32
   sav_dir: models/trained.h5
 

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/194235116973141430/aa0792f0a83e4d2daaa3ba61ede3a00f/artifacts
+end_time: 1743195149491
+entry_point_name: ''
+experiment_id: '194235116973141430'
+lifecycle_stage: active
+run_id: aa0792f0a83e4d2daaa3ba61ede3a00f
+run_name: nosy-kit-706
+run_uuid: aa0792f0a83e4d2daaa3ba61ede3a00f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743193868157
+status: 3
+tags: []
+user_id: atharvasatishchougale
